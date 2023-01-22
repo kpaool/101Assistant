@@ -1719,7 +1719,7 @@ section {
 }
 
 #footer .copyright {
-  border-top: 1px solid var(--blue);
+  border-top: 1px solid #8cd2f0;
   text-align: center;
   padding-top: 30px;
 }
