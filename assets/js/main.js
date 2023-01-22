@@ -156,6 +156,50 @@
         scrollto(window.location.hash)
       }
     }
+
+    let faqs= [
+        {
+          "question": "What is 101 Assistant?",
+          "answer": "101 Assistant is a cutting-edge browser extension that helps professional and occasional bettors make more informed decisions and maximize their profits. Our technology uses advanced algorithms to identify profitable betting opportunities, including arbitrage and sure bets, in real-time."
+      },
+      {
+          "question": "How does 101 Assistant work?",
+          "answer": "101 Assistant seamlessly integrates with your browser, providing you with real-time information on profitable betting opportunities. Our extension also includes features such as automatic bidding, performance reports, and insurance to help you streamline your betting process and maximize your profits."
+      },
+      {
+          "question": "What are the features of 101 Assistant?",
+          "answer": "101 Assistant includes a number of powerful features such as arbitrage and sure bet detection, automatic bidding, performance reports, and insurance. These features work together to help you make more informed decisions, streamline your betting process, and maximize your profits."
+      },
+      {
+          "question": "Is 101 Assistant safe to use?",
+          "answer": "Yes, 101 Assistant uses military-grade technology and advanced intelligent computing to ensure maximum account safety. We take the security of our customers' data and performance extremely seriously, so you can trust that your information is safe with us."
+      },
+      {
+          "question": "How do I get started with 101 Assistant?",
+          "answer": "Getting started with 101 Assistant is easy. Simply download our browser extension and start using it to identify profitable betting opportunities and streamline your betting process. Our extension is easy to use and comes with detailed instructions and support."
+      },
+      {
+          "question": "How much does 101 Assistant cost?",
+          "answer": "Pricing information for 101 Assistant can be found on our website. We offer flexible pricing options to suit your needs and budget."
+      }
+    ];
+    let fadeup_delay=0;
+    let string='';
+    faqs.forEach((item,index)=>{
+      string+= `<li data-aos="fade-up" data-aos-delay="${fadeup_delay}">
+      <i class="bx bx-help-circle icon-help"></i> <a data-bs-toggle="collapse" data-bs-target="#faq-list-${index}" class="collapsed">
+      ${item.question}? <i class="bx bx-chevron-down icon-show"></i><i class="bx bx-chevron-up icon-close"></i></a>
+      <div id="faq-list-${index}" class="collapse" data-bs-parent=".faq-list">
+        <p>
+        ${item.answer}
+        </p>
+      </div>
+    </li>`
+      fadeup_delay+=100;
+    });
+    document.querySelector("#faq-list-id").innerHTML=string;
+    console.log(string);
+
   });
 
   /**
@@ -217,4 +261,9 @@
    */
   new PureCounter();
 
+  
+
+  
+
+  
 })()
